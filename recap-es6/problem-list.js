@@ -43,3 +43,46 @@ const number3 = (x, y, z) => {
 console.log(number3(2, 3, 4))
 
 //৪. [হোম ওয়ার্ক] একটু গুগলে সার্চ দাও: javascript function declaration vs arrow function তারপর কয়েকটা আর্টিকেল পড়ে বুঝার চেষ্টা করো। 
+
+//৫. অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৫ দিয়ে গুন্ করে গুনফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে।  
+const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const array5 = myArray.map(num => num * 5)
+console.log(myArray.map(num => num * 5))
+
+//৬. [ চ্যালেঞ্জিং। গুগলে সার্চ দিয়ে বের করো ] অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো  
+console.log(myArray.filter(x => x % 2 == 1))
+
+//৭. একটা array এর মধ্যে অনেকগুলা অবজেক্ট আছে। সেখানে যেই অবজেক্ট এর price আছে ৫০০০ টেক্কা সেই অবজেক্টকে find দিয়ে বের করো। 
+
+const products = [
+    { name: 'hp laptop', price: 50000, ram: 12, color: 'Red' },
+    { name: 'phone', price: 50000, ram: 2, color: 'Black' },
+    { name: 'Tv', price: 20000, color: 'Pink' },
+    { name: 'Cycle', price: 5000, color: 'Green' }
+]
+const cheap = products.find(product => product.price == 5000);
+console.log(cheap)
+
+//৮. সিম্পল একটা জাভাস্ক্রিপ্ট অবজেক্ট এর কোন একটা প্রোপার্টিকে ভেরিয়েবল হিসেবে ডিক্লেয়ার করার জন্য destructuring ইউজ করো।  
+
+const phones = { name: 'nokia', price: 5500, ram: 4, camera: 13 }
+const { price, ram } = phones
+console.log(price, ram)
+
+//৯. [চ্যালেঞ্জিং] array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর থার্ড পজিশন এর উপাদান কে destructuring করে 'three' নামক একটা ভেরিয়েবল এ রাখবে।  
+
+const myLaptop = {
+    name: 'Hp ',
+    gen: { core: 'i-5 ', screen: 15 },
+    internalPro: {
+        ram: 12,
+        rom: '1TB',
+        ssd: 250,
+        external: {
+            mouse: 'A4Tech',
+            keyboard: 'Havit'
+        }
+    }
+}
+const { keyboard } = myLaptop.internalPro.external
+console.log(keyboard) 
