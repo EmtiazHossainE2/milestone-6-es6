@@ -85,4 +85,15 @@ const myLaptop = {
     }
 }
 const { keyboard } = myLaptop.internalPro.external
-console.log(keyboard) 
+console.log(keyboard)
+
+//১০. তিনটা প্যারামিটার ওয়ালা একটা ফাংশন লিখবে। যেই ফাংশনের কাজ হবে তিনটা প্যারামিটার নিয়ে সেই তিনটা প্যারামিটার এর যোগ করে যোগফল রিটার্ন করবে। আর থার্ড প্যারামিটার এর একটা ডিফল্ট ভ্যালু থাকবে। সেটা হবে ৭।  
+
+/* function myFunc(x, y, z = 7) {
+    return x + y + z
+}
+const myFun = myFunc(2, 3)
+console.log(myFun) */ // they are same regular func vs arrow func 
+
+const myFunc = (x, y, z = 7) => x + y + z
+console.log(myFunc(2, 3))
