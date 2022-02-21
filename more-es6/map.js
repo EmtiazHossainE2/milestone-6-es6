@@ -19,7 +19,8 @@ const doubleIt = number => number * 2
 
 //map diye same kaj kora jay 
 const numbers = [5, 10, 15, 20, 25]
-const value = []
-const doubleIt = number => number * 2
-const output = numbers.map(doubleIt) //map uporer kaj gulan e kore
+// const value = []
+// const doubleIt = number => number * 2
+// const output = numbers.map(doubleIt) //map uporer kaj gulan e kore
+const output = numbers.map(number => number * 2)
 console.log(output)
