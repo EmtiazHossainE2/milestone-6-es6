@@ -11,6 +11,6 @@ function loadUsers() {
 }
 function displayUser(data) {
     for (const user of data) {
-        console.log(user)
+        console.log(user.name)
     }
 }
