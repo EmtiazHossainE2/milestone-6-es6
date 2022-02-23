@@ -11,7 +11,9 @@ const displayUser = data => {
         console.log(user)
         const p = document.createElement('p')
         p.innerHTML = `
-        Name : ${user.name.title} ${user.name.first} ${user.name.last} & Email :  ${user.email}
+        Name : ${user.name.title} ${user.name.first} ${user.name.last}  <br>
+        Email :  ${user.email}  <br>
+        Phone : ${user.phone}
         `
         randomUsers.appendChild(p)
     }
