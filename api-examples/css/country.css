@@ -4,5 +4,15 @@
     padding: 10px;
     border-radius: 15px;
     border: 1px solid rgb(218, 104, 104);
-    width: 300px;
+}
+.modal-body img{
+    margin-bottom: 10px;
+}
+.modal-body a{
+    text-decoration:none;  
+    padding:4px;
+    border: 2px solid rgb(207, 112, 112);
+    background-color: rgb(60, 63, 58);
+    color: #fff;
+    border-radius: 5px;
 }

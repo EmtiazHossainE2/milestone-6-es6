@@ -10,7 +10,7 @@ const displayCountry = data => {
     // }
     const countryContainer = document.getElementById('countries')
     data.forEach(country => {
-        // console.log(country)
+        console.log(country)
         const div = document.createElement('div')
         div.classList.add('col')
         // div.innerHTML = `
@@ -32,7 +32,7 @@ const displayCountry = data => {
                 <p>Capital Name : ${country.capital} </p>
                 <p>Borders : ${country.borders}</p> 
                 <p>Time Zone : ${country.timezones} </p>
-                
+
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     onclick="loadCountryDetails('${country.name.common}')">
                     Details
@@ -56,7 +56,10 @@ const displayCountryDetails = country => {
     <h4>Country Name : ${country.name.common} </h4>
         <p>Capital Name : ${country.capital} </p> 
         <p>Time Zone : ${country.timezones} </p>
-        <img src="${country.flags.png}">
+        <p>Population : ${country.population} </p>
+        <p>Total Area : ${country.area} km²</p>
+        <img  src="${country.flags.png}"> <br>
+        <a  target="_blank" href="${country.maps.googleMaps}">Google Maps  </a>
     `
 }
 
