@@ -78,7 +78,7 @@ const displayComment = comments => {
 
 //৫. ডাইনামিক ডাটা লোড। কোন একটা কমেন্ট এ ক্লিক করলে (কমেন্ট এর div এ বা কোন একটা বাটন এ )সেই কমেন্ট এর আইডি নিয়ে সেটা api এর url এ বসিয়ে (ডাইনামিকভাবে টেমপ্লেট স্ট্রিং দিয়ে) সেই ডাটা লোড করে। সেই ডাটা ওয়েবসাইট এ দেখাতে পারতেছো কিনা।
 
-/* const loadComment = () => {
+const loadComment = () => {
     fetch('https://jsonplaceholder.typicode.com/comments')
         .then(res => res.json())
         .then(data => displayComment(data.slice(0, 20)))
@@ -96,15 +96,35 @@ const displayComment = comments => {
         <p>Title : ${showComment.name}</p>
         <p>User Email : ${showComment.email}</p>
         <p>User Comment : ${showComment.body}</p>
+        <button type="button" class="btn btn-secondary" onclick="loadCommentDetails()">Details
+        </button>
     `
         comment.appendChild(div)
     })
-} */
+}
+
+const loadCommentDetails = () => {
+    // const url = `https://jsonplaceholder.typicode.com/comments`
+    fetch('https://jsonplaceholder.typicode.com/comments')
+        .then(res => res.json())
+        .then(data => displayDetails(data.slice(0, 20)))
+}
+
+const displayDetails = showComment => {
+    console.log(showComment.slice(0, 1)[0])
+    const detailsComment = document.getElementById('comment-details')
+    detailsComment.classList.add('show-comment')
+    detailsComment.innerHTML = `
+    <p>Title : ${showComment[0].name}</p>
+    <p>User Email : ${showComment[0].email}</p>
+    <p>User Comment : ${showComment[0].body}</p>
+    `
+}
 
 
 //৬. randomuser এর ওয়েবসাইট এ গিয়ে (randomuser.me) এ গিয়ে সেখান থেকে ডাটা লোড করবে। তারপর ইউজারের ছবি দেখাবে। শুধু সেটাও না। ইউজারের location এর মধ্যে যত কিছু আছে। সব দেখাবে ওয়েবসাইট এ। অর্থাৎ street, city, coordinates, timezone যেকোন একভাবে দেখলেই হবে। তবে দেখাতে হবে। 
 
-fetch('https://randomuser.me/api/')
+/* fetch('https://randomuser.me/api/')
     .then(res => res.json())
     .then(data => displayUser(data))
 
@@ -136,4 +156,4 @@ const displayBtn = something => {
     const results = something.results
     userDisplay(results)
 
-}
+} */
