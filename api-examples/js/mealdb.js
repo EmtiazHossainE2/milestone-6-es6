@@ -65,7 +65,7 @@ const displayDetails = meal => {
         <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
         <div class="card-body">
         <h5 class="card-title">${meal.strMeal.slice(0, 25)}</h5>
-        <p class="card-text">${meal.strInstructions.slice(0, 200)}</p>
+        <p class="card-text">${meal.strInstructions.slice(0, 100)}</p>
         <a target="_blank" href="${meal.strYoutube}" class="btn btn-primary">Watch Video</a>
         </div>
     `
