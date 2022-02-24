@@ -1,0 +1,7 @@
+.comment{
+    background-color: rgb(231, 208, 208);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 15px;
+}
