@@ -65,3 +65,24 @@ const multyPera = (x, y) => {
     return totalSum
 }
 console.log(multyPera(10, 20))
+
+//৪. অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৭ দিয়ে ভাগ করে ভাগফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে।  
+
+const myNumbers = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+const result = myNumbers.map(number => number / 7)
+console.log(result)
+
+//৫. জাভাস্ক্রিপ্ট এ array এর map, forEach, filter, find কোনটা দিয়ে কি হয়। সেটার একটা সামারি লিখে ফেলো।  
+/* 
+map() array er potiti upadaner jonne function call kore & sob function er result ke notun array te return kore . 
+
+forEach() array er potita upadan er jonner function ke call kore kintu kono kicu return kroe nah . 
+
+filter() array er potita upadan er moddhe jeta jeta condition fullfill korbe seta ke ekta array te rekhe seta return korbe 
+
+find() array er potita upadan er moddhe jeta first e condition fillup korbe setai just return korbe 
+
+this ==> class er vitore obj er property gulo access korar jonne this use kora hoy . 
+
+*/
+
