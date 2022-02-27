@@ -22,18 +22,11 @@ console.log(mySelf.food(500))
 //২. একটা টেম্পলেট স্ট্রিং দিয়ে একটা স্ট্রিং ভেরিয়েবল ডিক্লেয়ার করো। সেটার মধ্যে উপরের অবজেক্ট এর একটা তিনটা প্রপার্টি এর মান তোমার টেমপ্লেট স্ট্রিং এর মধ্যে বসাও। এর মধ্যে একটা প্রপার্টি সেট করবে--যেটা নেস্টেড অবজেক্ট আছে সেটার প্রপার্টি থেকে। আরেকটা প্রপার্টি হবে যে প্রপার্টি এর মান একটা array সেটার সেকেন্ড পজিশন এর উপাদান দিয়ে। আর বাকি একটা তোমার ইচ্ছা মতো বসাতে পারো। 
 
 const friends = `
-    money: 5000,
-    bestFriend: {
-        name: 'Rion ',
-        home: 'Pirgonj',
-        study: 'RMC',
-        age: 23
-    },
-    food: function (exp) {
-        this.money = this.money - exp
-        return this.money
-    }
+    My name is ${mySelf.firstname} 
+    My best friend age is ${mySelf.bestFriend.age}
+    My phone number is ${mySelf.phoneNumbers[1]}
 `
+console.log(friends)
 
 //৩.১. শূন্য প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন লিখবে যেটা ৮৯ রিটার্ন করবে। 
 const number89 = () => 89
