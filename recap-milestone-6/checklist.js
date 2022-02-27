@@ -95,6 +95,6 @@ const myObj = {
     village: 'pirjabad'
 }
 const { money } = myObj
-console.log(money)
+const balance = money
+console.log(balance)
 
-//
