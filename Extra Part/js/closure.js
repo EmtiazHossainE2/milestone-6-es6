@@ -27,3 +27,23 @@ console.log(IslamiBank.deposit(500));
 console.log(IslamiBank.balance);
 console.log('Deposit ' + IslamiBank.deposit(5000));
 console.log('Withdraw ' + IslamiBank.withdraw(4000));
+
+
+/* (function () {
+    let num1 = 1
+    let num2 = 2
+    let sum = function () {
+        let num3 = 3
+        return num1 + num2 + num3
+    }
+    console.dir(sum);
+
+})()  */
+
+let num1 = 1
+let num2 = 2
+let sum = function () {
+    let num3 = 3
+    return num1 + num2 + num3
+}
+console.dir(sum);
