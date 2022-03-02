@@ -35,8 +35,6 @@ class Neptune extends TeamMember {
     }
 }
 
-
-
 const mirHussain = new Support('Mir Hussain', 'Dhanmondi', 11)
 const sagorBiswas = new Support('Sagor Biswas', 'Ctg', 4)
 const tanmoyParvez = new Support('Tanmoy Parvez', 'Pabna', 9)
@@ -44,8 +42,10 @@ const hebronHossain = new Support('Hameem', 'Dhaka', 11)
 const mehediHasan = new StudentCare('Mehedi Hasan', 'Dhaka')
 const raselAhmed = new Neptune('Rasel Ahmed', 'Dhaka', 'Android Studio')
 
-console.log(mirHussain, sagorBiswas, mehediHasan, raselAhmed);
+console.log(mirHussain, sagorBiswas, tanmoyParvez, hebronHossain, mehediHasan, raselAhmed);
 mirHussain.startASession();
 sagorBiswas.startASession();
+tanmoyParvez.startASession();
+hebronHossain.startASession();
 mehediHasan.buildARoutine('Rion')
 raselAhmed.releaseApp('1.4.64');
