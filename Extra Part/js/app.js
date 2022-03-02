@@ -8,6 +8,8 @@ const common = () => {
     }
     else {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&units=metric`
+        console.log(url);
+
         fetch(url)
             .then(response => response.json())
             .then(data => displayTemperature(data))
